@@ -9,7 +9,7 @@ function task14(number) {
       oddCount = oddCount + 1;
     }
   }
-  return {"odd" : oddCount, "even": evenCount};
+  return { odd: oddCount, even: evenCount };
 }
 
-console.log(task14(10))
+console.log(task14(10));
