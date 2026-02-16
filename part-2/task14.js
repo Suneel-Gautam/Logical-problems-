@@ -4,7 +4,8 @@
 // If no such number exists, return -1
 // Input:  [2, 4, 2, 5, 4, 7]
 
-function task13(arr) {
+function task14(arr) {
+  let number = [];
   for (let i = 0; i < arr.length; i++) {
     let count = 0;
     for (let j = 0; j < arr.length; j++) {
@@ -12,11 +13,11 @@ function task13(arr) {
         count = count + 1;
       }
     }
-    if (count === 1) {
-      return arr[i];
+    if (!(count >= 2)) {
+      number.push(arr[i]);
     }
   }
-  return -1;
+  return number;
 }
 let array = [2, 4, 2, 5, 4, 6, 8];
-console.log(task13(array));
+console.log(task14(array));
