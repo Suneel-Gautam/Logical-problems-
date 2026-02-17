@@ -1,10 +1,18 @@
 function task16(arr) {
+  let mininumPrice = arr[0];
+  let maxProfit = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i + 1]) {
-      return arr[i] - arr[i + 1];
+    if (mininumPrice > arr[i]) {
+      mininumPrice = arr[i];
+    } else {
+      let profit = arr[i] - mininumPrice;
+      if (profit > maxProfit) {
+        maxProfit = profit;
+      }
     }
   }
-  return 0
+
+  return maxProfit;
 }
 
 console.log(task16([7, 1, 5, 3, 6, 4]));
